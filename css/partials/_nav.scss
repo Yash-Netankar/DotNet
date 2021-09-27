@@ -1,0 +1,73 @@
+@import "../utils/flex";
+
+nav{
+    padding: 0rem 1.5rem;
+    width: 100%;
+    background: rgba(245, 245, 245, 0.9);
+    box-shadow: 0 1px 20px 3px #0000003b;
+    @include flex(row, space-between, center);
+    transition: all .3s;
+
+    // left logo
+    .leftLogo{
+        width: 30%;
+        img{
+            object-fit: contain;
+        }
+    }
+
+    // right logo
+    .rightLogo{
+        h1,h4{
+            text-align: right;
+            font-size: 2.2rem;
+            color: $brown;
+            font-weight: 700;
+            text-shadow: 1px 1px 1px #444;
+        }
+        h4{
+            font-size: .9rem;
+            text-shadow: 0px 0px 1px #444;
+        }
+    }
+
+}
+
+nav.fix{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .3s;
+}
+
+
+@media screen and (max-width:650px) {
+    nav .rightLogo{
+        h1{
+            font-size: 1.5rem;
+        }
+        h4{
+            font-size: .6rem;
+        }
+    }
+}
+
+@media screen and (max-width:550px) {
+    nav {
+        .rightLogo{
+            h1{
+                font-size: 1.1rem;
+            }
+            h4{
+                font-size: .5rem;
+            }
+        }
+
+        .leftLogo{
+            width: 30%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

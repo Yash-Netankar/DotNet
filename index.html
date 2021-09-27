@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions Page</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <nav>
+        <div class="leftLogo">
+            <img src="https://idladmissions.dpu.edu.in/assets/images/DPU%20Col%20high%20resolution.png" alt="DPU Logo">
+        </div>
+        <div class="rightLogo">
+            <h1>Admissions 2021-22</h1>
+            <h4>An ISO 9001 : 2015 Certified University</h4>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <!-- Register, Login sections -->
+        <main class="Pages">
+
+            <!-- REGISTER SECTION -->
+            <section class="RegistrationPage">
+                <h1>Learner's Registration & Authentication</h1>
+
+                <div>
+                    <!-- first row of inputs -->
+                    <div class="ip_group">
+                        <div class="input">
+                            <label for="RegistrationName">Name of Candidate as in Qualified Exam<span
+                                    class="requiredStar">*</span></label>
+                            <input type="text" ID="RegistrationName" runat="server" />
+                        </div>
+
+                        <div class="input">
+                            <label for="RegistrationEmail">Email<span class="requiredStar">*</span></label>
+                            <small>[ This Email Id will be used to sign in on LMS ]</small>
+                            <input type="email" ID="RegistrationEmail" runat="server" />
+                        </div>
+                    </div>
+
+
+                    <!-- second row of inputs -->
+                    <div class="ip_group">
+                        <div class="input">
+                            <label for="CategoryList">Select Category<span class="requiredStar">*</span></label>
+                            <select id="CategoryList">
+                                <option>Indian-General</option>
+                                <option>Indian-Airtel Network</option>
+                                <option>Indian-Defence</option>
+                                <option>Indian-Differently Abled</option>
+                                <option>Indian-DPU Staff / Alumni</option>
+                                <option>Other Countries</option>
+                                <option>SAARC Countries</option>
+                            </select>
+                        </div>
+
+                        <div class="input">
+                            <small>[ Once verified, you will not be able to change the Mobile No. ]</small>
+
+                            <div class="mobile-main-div">
+                                <div class="mobile-sub-div">
+                                    <label for="RegistrationMobileCountryCode">Country Code<span
+                                            class="requiredStar">*</span></label>
+                                    <select type="text" ID="RegistrationMobileCountryCode" runat="server">
+                                        <option value="+91">+91</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="RegistrationMobile">Mobile Number<span
+                                            class="requiredStar">*</span></label>
+                                    <input type="number" max="10" maxlength="10" ID="RegistrationMobile"
+                                        runat="server" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- third row of form -->
+                    <div class="ip_group">
+
+                        <div class="input">
+                            <label for="ProgramList">Program Name<span class="requiredStar">*</span></label>
+                            <select id="ProgramList">
+                                <option value="MBA">MBA</option>
+                                <option value="CPDM">CPDM</option>
+                                <option value="CPHM">CPHM</option>
+                                <option value="BBA">BBA</option>
+                            </select>
+                        </div>
+
+                        <div class="input captcha_ip_group">
+                            <label for="captcha">Enter Code Shown in image<span class="requiredStar">*</span></label>
+
+                            <div class="captcha-ip">
+
+                                <div>
+                                    <input type="text" runat="server" ID="captcha" />
+                                </div>
+
+                                <div class="captcha-code">
+                                    <h3>Ded</h3>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <!--fourth row of input-->
+                    <div class="ip_group">
+
+                        <div class="input">
+                            <label for="Password">Password<span class="requiredStar">*</span></label>
+                            <small>[ Password must be minium 8 characters ]</small>
+                            <input type="password" ID="Password" runat="server">
+                        </div>
+
+                        <div class="input">
+                            <label for="CPassword">Confirm Password<span class="requiredStar">*</span></label>
+                            <small>[ Password must be minium 8 characters ]</small>
+                            <input type="password" ID="CPassword" runat="server" min="8" minlength="8">
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="ip_group">
+                        <button type="submit" ID="RegisterBtn" runat="server">Verify Details</button>
+                    </div>
+
+
+                </div>
+            </section>
+
+
+
+            <!--LOGIN SECTION-->
+            <section class="LoginPage">
+
+
+                <h1>Already Registered</h1>
+
+                <div>
+
+                    <div class="ip-group">
+                        <label for="LoginEmail">Registered Email ID</label>
+                        <input type="email" ID="LoginEmail" runat="server" />
+                    </div>
+
+                    <div class="ip-group">
+                        <label for="LoginPass">Password</label>
+                        <input type="password" ID="LoginPass" runat="server" />
+                    </div>
+
+                    <div class="ip-group check-forgotPass-link">
+                        <div>
+                            <input type="checkbox" id="rememberLogin" runat="server" />
+                            <label for="rememberLogin">Remember Me</label>
+                        </div>
+
+                        <a href="#">Forgot Password?</a>
+                    </div>
+
+
+                    <div class="ip_group">
+                        <button type="submit" ID="SignInbtn" runat="server">Sign In</button>
+                    </div>
+
+                </div>
+
+
+            </section>
+
+        </main>
+    </div>
+
+
+    <!-- script for fixed navigation bar -->
+    <script>
+
+        const nav = document.getElementsByTagName("nav")[0];
+
+        window.addEventListener("scroll", (e) => {
+            if (window.scrollY > 100) nav.classList.add("fix");
+            else if (window.scrollY < 80) nav.classList.remove("fix");
+            console.log(window.scrollY);
+        })
+
+    </script>
+
+
+</body>
+
+</html>

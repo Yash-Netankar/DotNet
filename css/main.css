@@ -1,0 +1,381 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.39)), to(rgba(0, 0, 0, 0.788))), url("https://idladmissions.dpu.edu.in/assets/images/Quality-Management.jpg") center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.788)), url("https://idladmissions.dpu.edu.in/assets/images/Quality-Management.jpg") center center;
+  background-size: cover;
+}
+
+nav {
+  padding: 0rem 1.5rem;
+  width: 100%;
+  background: rgba(245, 245, 245, 0.9);
+  -webkit-box-shadow: 0 1px 20px 3px #0000003b;
+          box-shadow: 0 1px 20px 3px #0000003b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+nav .leftLogo {
+  width: 30%;
+}
+
+nav .leftLogo img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+nav .rightLogo h1, nav .rightLogo h4 {
+  text-align: right;
+  font-size: 2.2rem;
+  color: #A8272F;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px #444;
+}
+
+nav .rightLogo h4 {
+  font-size: .9rem;
+  text-shadow: 0px 0px 1px #444;
+}
+
+nav.fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+@media screen and (max-width: 650px) {
+  nav .rightLogo h1 {
+    font-size: 1.5rem;
+  }
+  nav .rightLogo h4 {
+    font-size: .6rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  nav .rightLogo h1 {
+    font-size: 1.1rem;
+  }
+  nav .rightLogo h4 {
+    font-size: .5rem;
+  }
+  nav .leftLogo {
+    width: 30%;
+  }
+  nav .leftLogo img {
+    width: 100%;
+  }
+}
+
+.Pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding: 20px 30px;
+}
+
+.Pages .RegistrationPage {
+  padding: 20px 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#0097a7), color-stop(#0097a7b8), to(#0097a7));
+  background: linear-gradient(to right, #0097a7, #0097a7b8, #0097a7);
+  -webkit-box-flex: 65%;
+      -ms-flex: 65%;
+          flex: 65%;
+  max-width: 700px;
+  border-radius: 10px;
+}
+
+.Pages .RegistrationPage h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: whitesmoke;
+  margin-bottom: 2rem;
+}
+
+.Pages .RegistrationPage .ip_group {
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.Pages .RegistrationPage .ip_group .input {
+  width: 100%;
+}
+
+.Pages .RegistrationPage .ip_group label, .Pages .RegistrationPage .ip_group small {
+  display: block;
+  font-size: .8rem;
+  color: #A8272F;
+}
+
+.Pages .RegistrationPage .ip_group small {
+  font-weight: bold;
+  margin-bottom: .2rem;
+}
+
+.Pages .RegistrationPage .ip_group label {
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: white;
+}
+
+.Pages .RegistrationPage .ip_group label .requiredStar {
+  color: red;
+}
+
+.Pages .RegistrationPage .ip_group input, .Pages .RegistrationPage .ip_group select {
+  padding: 8px 5px;
+  background: whitesmoke;
+  width: 90%;
+  color: #333;
+  outline: none;
+  border: none;
+}
+
+.Pages .RegistrationPage .ip_group input:focus, .Pages .RegistrationPage .ip_group select:focus {
+  outline: 1px solid yellow;
+}
+
+.Pages .RegistrationPage .ip_group input::-webkit-inner-spin-button, .Pages .RegistrationPage .ip_group input::-webkit-outer-spin-button, .Pages .RegistrationPage .ip_group select::-webkit-inner-spin-button, .Pages .RegistrationPage .ip_group select::-webkit-outer-spin-button {
+  display: none !important;
+}
+
+.Pages .RegistrationPage .ip_group .captcha_ip_group label {
+  font-size: 1rem;
+}
+
+.Pages .RegistrationPage .ip_group .captcha_ip_group .captcha-ip {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+}
+
+.Pages .RegistrationPage .ip_group .captcha_ip_group .captcha-code {
+  background: moccasin;
+  padding: 10px 20px;
+}
+
+.Pages .RegistrationPage .ip_group .captcha_ip_group .captcha-code h3 {
+  letter-spacing: 1px;
+}
+
+.Pages .RegistrationPage .ip_group #ProgramList, .Pages .RegistrationPage .ip_group #CategoryList {
+  cursor: pointer;
+}
+
+.Pages .RegistrationPage .ip_group .mobile-main-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Pages .RegistrationPage .ip_group .mobile-main-div .mobile-sub-div {
+  margin-right: .8rem;
+}
+
+.Pages .RegistrationPage .ip_group .mobile-main-div .mobile-sub-div #RegistrationMobileCountryCode {
+  width: auto;
+}
+
+.Pages .RegistrationPage .ip_group .mobile-main-div label {
+  font-size: .9rem;
+}
+
+.Pages .RegistrationPage .ip_group #RegisterBtn {
+  background-color: #A8272F;
+  padding: 10px 15px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+.Pages .LoginPage {
+  background: -webkit-gradient(linear, left top, right top, from(#337ab7), color-stop(#347db7d1), to(#337ab7));
+  background: linear-gradient(to right, #337ab7, #347db7d1, #337ab7);
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+  max-width: 350px;
+  padding: 20px 10px;
+  border-radius: 5px;
+}
+
+.Pages .LoginPage h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: whitesmoke;
+  margin-bottom: 2rem;
+}
+
+.Pages .LoginPage .ip-group {
+  width: 90%;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.Pages .LoginPage .ip-group label {
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+}
+
+.Pages .LoginPage .ip-group label .requiredStar {
+  color: red;
+}
+
+.Pages .LoginPage .ip-group input {
+  padding: 8px 5px;
+  background: whitesmoke;
+  width: 90%;
+  color: #333;
+  outline: none;
+  border: none;
+}
+
+.Pages .LoginPage .ip-group input:focus {
+  outline: 1px solid yellow;
+}
+
+.Pages .LoginPage .check-forgotPass-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Pages .LoginPage .check-forgotPass-link div {
+  max-width: 80%;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Pages .LoginPage .check-forgotPass-link div input {
+  width: 10%;
+  outline: none;
+  border: none;
+}
+
+.Pages .LoginPage .check-forgotPass-link a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.Pages .LoginPage #SignInbtn {
+  background-color: #A8272F;
+  padding: 10px 15px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+/*# sourceMappingURL=main.css.map */

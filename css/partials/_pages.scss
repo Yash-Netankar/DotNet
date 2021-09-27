@@ -1,0 +1,200 @@
+@import "../utils/flex";
+
+.Pages{
+    @include flex(row, space-between, start);
+    padding: 20px 30px;
+
+    // Register Page
+    .RegistrationPage{
+        padding: 20px 10px;
+        background: linear-gradient(to right, #0097a7, #0097a7b8, #0097a7);
+        flex: 65%;
+        max-width: 700px;
+        border-radius: 10px;
+        h1{
+            font-size: 1.6rem;
+            text-align: center;
+            color: whitesmoke;
+            margin-bottom: 2rem;
+        }
+
+
+        .ip_group{
+            margin-bottom: 2rem;
+            @include flex(row, space-between, end);
+            .input{
+                width: 100%;
+            }
+
+            label, small{
+                display:block;
+                font-size: .8rem;
+                color: $brown;
+            }
+            small{
+                font-weight: bold;
+                margin-bottom: .2rem;
+            }
+            label{
+                font-size: 1.1rem;
+                cursor: pointer;
+                color: white; 
+                .requiredStar{
+                    color: red;
+                }
+            }
+
+            input,select{
+                padding: 8px 5px;
+                background: whitesmoke;
+                width: 90%;
+                color: #333;
+                outline: none;
+                border: none;
+                &:focus{
+                    outline: 1px solid yellow;
+                }
+                &::-webkit-inner-spin-button,&::-webkit-outer-spin-button{
+                    display: none !important;
+                }
+            }
+
+            // captcha div
+            .captcha_ip_group{
+                label{
+                    font-size: 1rem;
+                }
+                
+                .captcha-ip{
+                    width: 100%;
+                    @include flex(row, flex-start, center);
+                    text-align: left;
+                }
+                .captcha-code{
+                    // margin-left: 4rem;
+                    background:moccasin;
+                    padding: 10px 20px;
+                    h3{
+                        letter-spacing: 1px;
+
+                    }
+                }
+            }
+
+            // dropdown lists
+            #ProgramList, #CategoryList{
+                cursor: pointer;
+            }
+
+
+            // phone number div
+            .mobile-main-div{
+                @include flex(row, flex-start, center);
+
+                .mobile-sub-div{
+                    margin-right: .8rem;
+
+                    #RegistrationMobileCountryCode{
+                        width: auto;
+                    }
+                }
+
+                label{
+                    font-size: .9rem;
+                }
+            }
+
+
+            #RegisterBtn{
+                background-color: $brown;
+                padding: 10px 15px;
+                color:#fff;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                letter-spacing: 1px;
+                word-spacing: 1px;
+            }
+
+        }
+    }
+
+
+
+
+
+
+    // LOGIN PAGE
+    .LoginPage{
+        background:linear-gradient(to right, #337ab7, #347db7d1, #337ab7);
+        flex: 20%;
+        max-width: 350px;
+        padding: 20px 10px;
+        border-radius: 5px;
+
+        h1{
+            font-size: 1.6rem;
+            text-align: center;
+            color: whitesmoke;
+            margin-bottom: 2rem;
+        }
+
+        .ip-group{
+            width: 90%;
+            margin-bottom: 2rem;
+            @include flex(column, flex-start, baseline);
+            
+            label{
+                font-size: 1rem;
+                cursor: pointer;
+                color: white; 
+                .requiredStar{
+                    color: red;
+                }
+            }
+
+            input{
+                padding: 8px 5px;
+                background: whitesmoke;
+                width: 90%;
+                color: #333;
+                outline: none;
+                border: none;
+                &:focus{
+                    outline: 1px solid yellow;
+                }
+            }
+        
+        }
+        .check-forgotPass-link{
+            @include flex(row, space-between, center);
+            div{
+                max-width: 80%;
+                width: 40%;
+                @include flex(row, space-between, center);
+                input{
+                    width: 10%;
+                    outline: none;
+                    border: none;
+                }
+            }
+            a{
+                font-size: 1.1rem;
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        #SignInbtn{
+            background-color: $brown;
+            padding: 10px 15px;
+            color:#fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            letter-spacing: 1px;
+            word-spacing: 1px;
+        }
+
+    }
+}
