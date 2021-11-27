@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs" Inherits="ERPAssignmentModule.MainMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <%--bootstrap css--%>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <%--icons--%>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <style>
+        body{
+            /*overflow:hidden;*/
+        }
+        header{
+            position:sticky;
+            top:0;
+            left:0;
+            z-index:3;
+            background:whitesmoke;
+        }
+        main{
+            display:flex;
+        }
+        main nav{
+            width:20%;
+            align-items:center;
+            height:95vh;
+            overflow-y:auto;
+            overflow-x:hidden;
+            position:absolute;
+            left:0;
+            z-index:2;
+            background-color:whitesmoke;
+        }
+        nav{
+            transition:.3s ease-in-out;
+        }
+        nav .nav-link{
+            width:100%;
+            text-align:center;
+            transition:.3s;
+            font-size:1.1rem;
+            color:black;
+        }
+        nav .nav-link:hover {
+            color:white;
+            background-color:royalblue;
+        }
+        nav.nav-slide{
+            transform:translate(-150%);
+        }
+
+         @media  screen and (max-width: 950px)  {
+            main nav,
+            nav.nav-slide{
+                width:45%;
+            }
+        }
+        @media  screen and (max-width: 550px)  {
+            main nav,
+            nav.nav-slide{
+                width:55%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <header class="d-flex align-items-center">
+            <div class="hamburger mx-3" id="hamburger">
+                <i class='fas fa-bars' style='font-size:24px;cursor:pointer'></i>
+            </div>
+            <h1>DPU LOGO</h1>
+        </header>
+
+        <%--main--%>
+        <main>
+            <nav class="nav nav-slide flex-column border">
+                <a class="nav-link active" href="CreateAssignment.aspx">Create Assignment</a>
+                <a class="nav-link" href="PublishAssignment.aspx">Publish Assignment</a>
+                <a class="nav-link" href="AssignmentReport.aspx">Assignment Report</a>
+            </nav>
+
+            <div class="dynamic-content p-3 pt-0 border-top w-100">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </main>
+
+        <asp:ContentPlaceHolder ID="Jscript" runat="server"></asp:ContentPlaceHolder>
+    </form>
+
+
+
+
+
+
+
+    <script async>
+        const hamburger = document.getElementById("hamburger");
+        const nav = document.querySelector(".nav");
+        const dynamic_content = document.querySelector(".dynamic-content");
+
+        hamburger.addEventListener("click", () => {
+            nav.classList.toggle("nav-slide");
+            dynamic_content.classList.toggle("nav-slide");
+        })
+    </script>
+
+
+
+    <%--bootstrap script--%>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿.container {
+    width: 80%;
+    max-width: 80%;
+    max-height: 80vh;
+    overflow: auto;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px 0px #999;
+    border-radius: 5px;
+}
+
+    .container::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .container::-webkit-scrollbar-track {
+        background: white;
+    }
+
+    .container::-webkit-scrollbar-thumb {
+        background: #999;
+        border-radius: 10px;
+    }
+
+    .container .row {
+        width: 100%;
+    }
+
+        .container .row .col {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+            .container .row .col .dropdown {
+                width: 80%;
+                outline: none;
+                cursor: pointer;
+                padding: 3px 0px;
+                margin-top: 1rem;
+            }
+
+.btn {
+    margin: 0 5px 5px 5px;
+    border-radius: 0px !important;
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        max-height: 80vh;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .container .row .col .dropdown {
+        display: block;
+        width: 100%;
+    }
+}
